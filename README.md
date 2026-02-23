@@ -1,147 +1,144 @@
-🚀 Overview
+🚀 Library Tracker System (Java • DSA • MySQL • Swing GUI)
 
-The Library Tracker System is a Java-based application developed as part of a Data Structures and Algorithms (DSA) summer training project.
-The system is implemented in two progressive versions:
 
-Console-based version using core DSA concepts (ArrayList, HashMap)
 
-Advanced version integrating MySQL via JDBC with a simple Swing GUI
 
-The project demonstrates the application of DSA, Object-Oriented Programming (OOP), and Database Management concepts to simulate a real-world library management system.
 
-🎯 Objectives
 
-Apply core Data Structures in a practical application
+📚 A complete Library Management System demonstrating Data Structures + OOP + DBMS + GUI in a real-world scalable design.
 
-Implement efficient searching and management of books
+✨ Project Highlights
 
-Provide persistent storage using MySQL
+🔍 Fast search using HashMap (O(1))
 
-Design a modular and scalable system architecture
+📦 Dynamic storage using ArrayList
 
-Demonstrate integration of DSA + DBMS + GUI
+💾 Persistent storage using MySQL + JDBC
 
-🧠 DSA Concepts Used
-Data Structure	Usage	Complexity
-ArrayList	Dynamic storage of books	O(1) amortized insert
-HashMap	Fast lookup by Book ID	O(1) search
-Linear Search	Search books by title	O(n)
-Caching Layer	In-memory copy of DB data	Optimized runtime performance
+🖥️ Interactive interface with Java Swing GUI
 
-The system loads database records into ArrayList and HashMap as an in-memory cache to reduce encouraging database queries.
+👤 Tracks which user issued which book
 
-🏗️ System Architecture
+🔐 Secure DB credentials via environment variables
+
+🧠 Core Concept: DSA + DBMS Integration
+
+This project shows how Data Structures power application logic while MySQL ensures data persistence.
+
 GUI / Console
       ↓
 LibraryManager (DSA + Business Logic)
       ↓
 MySQL Database (Persistent Storage)
+🎯 Objectives
 
-Presentation Layer: Console & Swing GUI
+Apply DSA concepts in a real application
 
-Logic Layer: LibraryManager using DSA + JDBC
+Implement efficient book search & management
 
-Database Layer: MySQL with normalized schema
+Provide scalable database-backed storage
 
-💾 Database Design
+Demonstrate clean OOP-based architecture
 
-The application uses a normalized relational database with three tables:
-
+🧱 DSA Concepts Applied
+Data Structure	Usage	Complexity
+📚 ArrayList	Dynamic storage of books	O(1) amortized
+⚡ HashMap	Fast lookup by Book ID	O(1)
+🔎 Linear Search	Search books by title	O(n)
+🧠 Cache Layer	In-memory DB copy	Optimized runtime
+🗄️ Database Schema
 books(id, title, author, isIssued)
-
 users(userId, name, email)
-
 issued_books(issueId, bookId, userId, issueDate, returnDate)
 
-This design enables tracking which user has taken which book and maintains issue-return history.
+✔ Normalized relational schema
+✔ Tracks book issue/return history
+✔ Supports multi-user management
 
-✨ Key Features
+🖥️ Features
+📘 Book Management
 
-Add Books and Users
+Add new books
 
-Issue & Return Books
+Search by ID & Title
 
-Search Book by ID (HashMap)
+Display all books
 
-Search Book by Title (Linear Search)
+Issue / Return books
 
-Display all Books and Users
+👤 User Management
 
-Show books taken by a specific user
+Add users
 
-Refresh in-memory cache from database
+Track issued books per user
 
-GUI interface using Java Swing
+Show active borrow records
 
-Secure database credential handling via environment variables
+🧩 Advanced Functionalities
 
-🔐 Security Improvement
+GUI-based interaction (Swing)
 
-Database credentials are externalized using environment variables instead of being hardcoded, following secure coding practices.
+Real-time DB refresh
 
-Set environment variables (Windows):
+Persistent storage using MySQL
 
-setx DB_USER root
-setx DB_PASSWORD your_mysql_password
-🖥️ Technologies Used
-
-Java (OOP + DSA)
-
-JDBC (Database Connectivity)
-
-MySQL (Relational Database)
-
-Java Swing (GUI)
-
-Git & GitHub (Version Control)
-
-▶️ How to Run
-1. Compile
-javac -cp ".;mysql-connector-j-9.6.0.jar" src/*.java
-2. Run Console Version
-java -cp ".;mysql-connector-j-9.6.0.jar;src" Main
-3. Run GUI Version
-java -cp ".;mysql-connector-j-9.6.0.jar;src" LibraryGUI
-🔍 Comparison: Console vs Advanced Version
+🔄 Two Versions Implemented
 Feature	Console Version	MySQL + GUI Version
 Storage	In-memory (DSA)	Persistent (MySQL)
 Interface	CLI	Swing GUI
-User Tracking	No	Yes
 Scalability	Limited	Real-world scalable
-Data Persistence	No	Yes
+User Tracking	❌	✅
+Data Persistence	❌	✅
+🔐 Secure Configuration
+
+Database credentials are not hardcoded.
+They are managed using environment variables:
+
+setx DB_USER root
+setx DB_PASSWORD your_mysql_password
+⚙️ Tech Stack
+
+☕ Java (OOP + DSA)
+
+🗄️ MySQL (Relational Database)
+
+🔗 JDBC (Connectivity Layer)
+
+🖥️ Swing (GUI)
+
+🛠️ Git & GitHub (Version Control)
+
+▶️ How to Run
+1️⃣ Compile
+javac -cp ".;mysql-connector-j-9.6.0.jar" src/*.java
+2️⃣ Run Console Version
+java -cp ".;mysql-connector-j-9.6.0.jar;src" Main
+3️⃣ Run GUI Version
+java -cp ".;mysql-connector-j-9.6.0.jar;src" LibraryGUI
 📈 Future Enhancements
 
-JTable-based GUI display
+📊 JTable-based GUI tables
 
-Overdue book tracking
+⏰ Overdue book tracking
 
-Analytics (most borrowed books)
+📉 Borrow analytics (most issued books)
 
-Web-based version using Spring Boot
+🌐 Web version using Spring Boot
 
-📚 Learning Outcomes
+🎓 Learning Outcomes
 
-This project demonstrates:
-
-Practical application of Data Structures (ArrayList, HashMap)
-
-Use of OOP pillars: Encapsulation, Abstraction, Polymorphism
-
-JDBC integration with MySQL
-
-Normalized database schema design
-
-Layered system architecture
-
-GUI development using Java Swing
+✔ Applied ArrayList & HashMap in real system
+✔ Implemented Encapsulation, Abstraction, Polymorphism
+✔ Designed normalized DB schema
+✔ Integrated JDBC with MySQL
+✔ Built layered software architecture
 
 👨‍💻 Author
 
 Akshit Prashar
-B.Tech Computer Science Engineering (3rd Year)
-Summer Training Project – DSA with Java
+🎓 B.Tech Computer Science Engineering (3rd Year)
+📚 Summer Training Project – DSA with Java
 
-📌 Conclusion
+🏁 Conclusion
 
-The Library Tracker System successfully integrates DSA, OOP, DBMS, and GUI concepts into a cohesive real-world application.
-It highlights efficient searching using HashMap, dynamic storage using ArrayList, and scalable persistent storage using MySQL, demonstrating both theoretical and practical understanding of core computer science principles.
+This project successfully integrates Data Structures, OOP, DBMS, and GUI into a cohesive real-world application, demonstrating efficient search operations, scalable architecture, and persistent data management.
